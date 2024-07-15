@@ -52,3 +52,57 @@ function Base.setproperty!(t::Union{reference_type_union(Transform),reference_ty
         setfield!(t, prop, val)
     end
 end
+
+for T in (Transform, InverseTransform)
+    @eval begin
+
+function show_transform(io::IO, x::($T))
+    arr_io = IOBuffer()
+    Base.print_array(IOContext(arr_io, :limit=>true), x.R[])
+    lines = eachline(arr_io)
+    padwidth = maximum(textwidth.(lines); init=0) + 3
+    summary(io, x)
+    println(io, ':')
+    seekstart(arr_io)
+    for (i, l) in enumerate(lines)
+        print(io, rpad(l, padwidth), " | ", x.T[i], ifelse(i==3,"", "\n"))
+    end
+end
+
+function Base.show(io::IO, x::($T))
+    if isnothing(get(io, :typeinfo, nothing))
+        summary(io, x)
+    end
+    print(io, '(')
+    print(IOContext(io, :limit=>true), dereference_argument(x.R), ", ", dereference_argument(x.T), ')')
+end
+
+function Base.show(io::IO, ::MIME"text/plain", x::reference_type_union(($T)))
+    if typeof(x) <: ($T)
+        show_transform(io, x)
+    else
+        if typeof(x) <: CxxRef
+            print(io, "CxxRef(")
+        elseif typeof(x) <: ConstCxxRef
+            print(io, "ConstCxxRef(")
+        else
+            print(io, typeof(x), '(')
+        end
+        prefix, implicit = Base.typeinfo_prefix(stdout, x)
+        print(io, prefix)
+        if !implicit
+            io = IOContext(io, :typeinfo => eltype(x))
+        end
+        show(io, dereference_argument(x))
+        print(io, ')')
+    end
+end
+
+    end
+end
+
+function Base.:*(
+    x1::Union{reference_type_union(Transform),reference_type_union(InverseTransform)},
+    x2::Union{reference_type_union(Transform),reference_type_union(InverseTransform)})
+    return compose(x1, x2)
+end

@@ -22,9 +22,9 @@ Base.size(x::SimTKSymMat{N}) where {N} = (N,N)
 for T in (SimTKArray, SimTKVector, SimTKMatrix, SimTKVec, SimTKRow, SimTKMat, SimTKSymMat)
     @eval begin
 
-function Base.show(io::IO, x::reference_type_union(($T)))
+function Base.show(io::IO, ::MIME"text/plain", x::reference_type_union(($T)))
     if typeof(x) <: ($T)
-        invoke(show, Tuple{IO,AbstractArray}, io, x)
+        invoke(show, Tuple{IO,MIME"text/plain",AbstractArray}, io, MIME"text/plain"(), x)
     else
         if typeof(x) <: CxxRef
             print(io, "CxxRef(")
