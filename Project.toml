@@ -3,5 +3,9 @@ uuid = "bd6b7f14-3c48-4dad-9936-c2b97998104f"
 authors = ["Allen Hill <allenofthehills@gmail.com> and contributors"]
 version = "1.0.0-DEV"
 
+[deps]
+CxxWrap = "1f15a43c-97ca-5a2a-ae31-89f07a497df4"
+jlsimbody_jll = "041f4ef7-f559-5b27-b355-a04ac8b0617e"
+
 [compat]
 julia = "1.10"
