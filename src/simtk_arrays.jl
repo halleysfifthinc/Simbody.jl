@@ -302,6 +302,7 @@ end
 
 const Vec3 = SimTKVec{3,Float64,1}
 const UnitVec = SimTKUnitVec{Float64,1}
+const SpatialVec = SimTKVec{2,Vec3,1}
 
 function Base.similar(a::SimTKVec, ::Type{T}, dims::Tuple{Int,Vararg{Int,N}})::AbstractMatrix{T} where {T,N}
     f, rest... = dims
@@ -349,6 +350,7 @@ Base.similar(a::SimTKMat{N,M}, ::Type{T}) where {N,M,T} = SimTKMat{N,M,T,1}()
 BroadcastStyle(::Type{<:SimTKMat}) = ArrayStyle{SimTKMat}()
 
 const Mat33 = SimTKMat{3,3,Float64,3,1}
+const SpatialMat = SimTKMat{2,2,Mat33,2,1}
 
 # Rerun the commented out lines if/when changing wrapped Mat parameters
 # WRAPPED_MAT_ELTYPES = Union{eltype.(cxxparametricsubtypes(SimTKMat))...}

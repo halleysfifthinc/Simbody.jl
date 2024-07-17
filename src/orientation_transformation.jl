@@ -101,6 +101,12 @@ end
     end
 end
 
+function Base.:(==)(
+    x1::reference_type_union(InverseTransform),
+    x2::reference_type_union(InverseTransform))
+    return invert(x1) == invert(x2)
+end
+
 function Base.:*(
     x1::Union{reference_type_union(Transform),reference_type_union(InverseTransform)},
     x2::Union{reference_type_union(Transform),reference_type_union(InverseTransform)})
