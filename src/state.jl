@@ -1,5 +1,5 @@
 # Simbody doesn't define a copy-constructor
-HandleEventsOptions(o::reference_type_union(HandleEventsOptions)) = bwor!(HandleEventsOptions(getAccuracy(a)), a)
+HandleEventsOptions(o::reference_type_union(HandleEventsOptions)) = bwor!(HandleEventsOptions(getAccuracy(o)), o)
 
 # Separate def because HandleEventsOptions doesn't define
 # operator&=(HandleEventsOptions, HandleEventsOption)
