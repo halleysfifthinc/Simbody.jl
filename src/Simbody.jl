@@ -28,11 +28,23 @@ export SimTKArray, SimTKVec, SimTKRow, SimTKMat, SimTKUnitVec, Quaternion, Rotat
     MinimumMeasure, MaximumMeasure, MaxAbsMeasure, MinAbsMeasure, GeoPoint, GeoSphere,
     GeoLineSeg, GeoBox, GeoAlignedBox, GeoOrientedBox, GeoTriangle, GeoCubicHermiteCurve,
     GeoBicubicHermitePatch, GeoCubicBezierCurve, GeoBicubicBezierPatch, Geodesic,
-    GeodesicOptions, DecorationGenerator, GeodesicDecorator, PathDecorator
+    GeodesicOptions, DecorationGenerator, GeodesicDecorator, PathDecorator, Contact,
+    UntrackedContact, BrokenContact, CircularPointContact, EllipticalPointContact,
+    BrickHalfSpaceContact, TriangleMeshContact, PointContact, ContactGeometry,
+    ContactHalfSpace, ContactCylinder, ContactSphere, ContactEllipsoid,
+    ContactSmoothHeightMap, ContactBrick, ContactTriangleMesh, ContactTorus, Plane, OBBTree,
+    OBBNode, BicubicSurface, BicubicFunction, ContactTriangleMesh_OBBTreeNode,
+    OrientedBoundingBox, GeodHitPlaneEvent, PlaneDecorator, ContactTracker,
+    HalfSpaceSphere_ContactTracker, HalfSpaceEllipsoid_ContactTracker,
+    HalfSpaceBrick_ContactTracker, SphereSphere_ContactTracker,
+    HalfSpaceTriangleMesh_ContactTracker, SphereTriangleMesh_ContactTracker,
+    TriangleMeshTriangleMesh_ContactTracker, HalfSpaceConvexImplicit_ContactTracker,
+    ConvexImplicitPair_ContactTracker, GeneralImplicitPair_ContactTracker, ContactMaterial,
+    ContactSurface
 
 # Enum types
 export StageLevel, EventCauseNum, EventTrigger, HandleEventsOption, HandleEventsResult,
-    ProjectOption, ProjectResult, RealizeOption, Measure_ExtremeOperation
+    ProjectOption, ProjectResult, RealizeOption, Measure_ExtremeOperation, ContactCondition
 
 # Type-aliases
 export Vec3, Row3, Mat33, UnitVec, SpatialVec, SpatialMat
