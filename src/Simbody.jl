@@ -28,7 +28,7 @@ export SimTKArray, SimTKVec, SimTKRow, SimTKMat, SimTKUnitVec, Quaternion, Rotat
     MinimumMeasure, MaximumMeasure, MaxAbsMeasure, MinAbsMeasure, GeoPoint, GeoSphere,
     GeoLineSeg, GeoBox, GeoAlignedBox, GeoOrientedBox, GeoTriangle, GeoCubicHermiteCurve,
     GeoBicubicHermitePatch, GeoCubicBezierCurve, GeoBicubicBezierPatch, Geodesic,
-    GeodesicOptions
+    GeodesicOptions, DecorationGenerator, GeodesicDecorator, PathDecorator
 
 # Enum types
 export StageLevel, EventCauseNum, EventTrigger, HandleEventsOption, HandleEventsResult,
