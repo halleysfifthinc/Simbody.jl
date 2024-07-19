@@ -25,7 +25,10 @@ export SimTKArray, SimTKVec, SimTKRow, SimTKMat, SimTKUnitVec, Quaternion, Rotat
     RealizeResults, CacheEntryInfo, AbstractMeasure, Measure, ConstantMeasure, ZeroMeasure,
     OneMeasure, TimeMeasure, VariableMeasure, ResultMeasure, SinusoidMeasure, PlusMeasure,
     MinusMeasure, ScaleMeasure, IntegrateMeasure, DifferentiateMeasure, ExtremeMeasure,
-    MinimumMeasure, MaximumMeasure, MaxAbsMeasure, MinAbsMeasure
+    MinimumMeasure, MaximumMeasure, MaxAbsMeasure, MinAbsMeasure, GeoPoint, GeoSphere,
+    GeoLineSeg, GeoBox, GeoAlignedBox, GeoOrientedBox, GeoTriangle, GeoCubicHermiteCurve,
+    GeoBicubicHermitePatch, GeoCubicBezierCurve, GeoBicubicBezierPatch, Geodesic,
+    GeodesicOptions
 
 # Enum types
 export StageLevel, EventCauseNum, EventTrigger, HandleEventsOption, HandleEventsResult,
@@ -43,5 +46,6 @@ include("massproperties.jl")
 include("decorations.jl")
 include("state.jl")
 include("system_subsystem.jl")
+include("geo.jl")
 
 end
