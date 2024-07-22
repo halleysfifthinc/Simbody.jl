@@ -1,0 +1,7 @@
+const TorsionMobilizedBody = PinMobilizedBody
+const RevoluteMobilizedBody = PinMobilizedBody
+const PrismaticMobilizedBody = SliderMobilizedBody
+const CartesianMobilizedBody = TranslationMobilizedBody
+const CartesianCoordsMobilizedBody = TranslationMobilizedBody
+const OrientationMobilizedBody = BallMobilizedBody
+const SphericalMobilizedBody = BallMobilizedBody

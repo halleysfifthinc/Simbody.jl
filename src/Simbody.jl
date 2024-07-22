@@ -40,14 +40,24 @@ export SimTKArray, SimTKVec, SimTKRow, SimTKMat, SimTKUnitVec, Quaternion, Rotat
     HalfSpaceTriangleMesh_ContactTracker, SphereTriangleMesh_ContactTracker,
     TriangleMeshTriangleMesh_ContactTracker, HalfSpaceConvexImplicit_ContactTracker,
     ConvexImplicitPair_ContactTracker, GeneralImplicitPair_ContactTracker, ContactMaterial,
-    ContactSurface
+    ContactSurface, Body, RigidBody, MasslessBody, GroundBody, Motion, SinusoidMotion,
+    SteadyMotion, CustomMotion, MobilizedBody, GroundMobilizedBody, BallMobilizedBody,
+    BendStretchMobilizedBody, BushingMobilizedBody, CylinderMobilizedBody,
+    EllipsoidMobilizedBody, FreeMobilizedBody, FreeLineMobilizedBody,
+    FunctionBasedMobilizedBody, GimbalMobilizedBody, LineOrientationMobilizedBody,
+    PinMobilizedBody, PlanarMobilizedBody, ScrewMobilizedBody, SliderMobilizedBody,
+    SphericalCoordsMobilizedBody, TranslationMobilizedBody, UniversalMobilizedBody,
+    WeldMobilizedBody
 
 # Enum types
 export StageLevel, EventCauseNum, EventTrigger, HandleEventsOption, HandleEventsResult,
-    ProjectOption, ProjectResult, RealizeOption, Measure_ExtremeOperation, ContactCondition
+    ProjectOption, ProjectResult, RealizeOption, Measure_ExtremeOperation, ContactCondition,
+    MotionLevel, MotionMethod, MobilizedBodyDirection
 
 # Type-aliases
-export Vec3, Row3, Mat33, UnitVec, SpatialVec, SpatialMat
+export Vec3, Row3, Mat33, UnitVec, SpatialVec, SpatialMat, TorsionMobilizedBody,
+    RevoluteMobilizedBody, PrismaticMobilizedBody, CartesianMobilizedBody,
+    CartesianCoordsMobilizedBody, OrientationMobilizedBody, SphericalMobilizedBody
 
 # export cxxparametricsubtypes
 
@@ -59,5 +69,6 @@ include("decorations.jl")
 include("state.jl")
 include("system_subsystem.jl")
 include("geo.jl")
+include("body.jl")
 
 end
