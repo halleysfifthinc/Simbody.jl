@@ -47,7 +47,16 @@ export SimTKArray, SimTKVec, SimTKRow, SimTKMat, SimTKUnitVec, Quaternion, Rotat
     FunctionBasedMobilizedBody, GimbalMobilizedBody, LineOrientationMobilizedBody,
     PinMobilizedBody, PlanarMobilizedBody, ScrewMobilizedBody, SliderMobilizedBody,
     SphericalCoordsMobilizedBody, TranslationMobilizedBody, UniversalMobilizedBody,
-    WeldMobilizedBody
+    WeldMobilizedBody, SimbodyMatterSubsystem, Constraint, UnilateralContact,
+    DecorationSubsystem, ContactSnapshot, ContactTrackerSubsystem, GeneralContactSubsystem,
+    CableTrackerSubsystem, CablePath, CableObstacle, ViaPointCableObstacle,
+    SurfaceCableObstacle, ForceSubsystem, GeneralForceSubsystem, Force,
+    TwoPointLinearSpringForce, TwoPointLinearDamperForce, TwoPointConstantForceForce,
+    ConstantForceForce, ConstantTorqueForce, GlobalDamperForce, UniformGravityForce,
+    DiscreteForcesForce, GravityForce, LinearBushingForce, MobilityConstantForceForce,
+    MobilityDiscreteForceForce, MobilityLinearDamperForce, MobilityLinearSpringForce,
+    MobilityLinearStopForce, ThermostatForce, HuntCrossleyForce, CableSpring,
+    ElasticFoundationForce
 
 # Enum types
 export StageLevel, EventCauseNum, EventTrigger, HandleEventsOption, HandleEventsResult,
