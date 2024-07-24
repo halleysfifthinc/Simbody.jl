@@ -56,7 +56,11 @@ export SimTKArray, SimTKVec, SimTKRow, SimTKMat, SimTKUnitVec, Quaternion, Rotat
     DiscreteForcesForce, GravityForce, LinearBushingForce, MobilityConstantForceForce,
     MobilityDiscreteForceForce, MobilityLinearDamperForce, MobilityLinearSpringForce,
     MobilityLinearStopForce, ThermostatForce, HuntCrossleyForce, CableSpring,
-    ElasticFoundationForce
+    ElasticFoundationForce, ContactPatch, ContactForceGenerator, CompliantContactSubsystem,
+    HuntCrossleyContact, ContactDetail, HertzCircularContactForceGenerator,
+    HertzEllipticalContactForceGenerator, BrickHalfSpacePenaltyContactForceGenerator,
+    ElasticFoundationContactForceGenerator, DoNothingContactForceGenerator,
+    ThrowErrorContactForceGenerator
 
 # Enum types
 export StageLevel, EventCauseNum, EventTrigger, HandleEventsOption, HandleEventsResult,
@@ -66,7 +70,9 @@ export StageLevel, EventCauseNum, EventTrigger, HandleEventsOption, HandleEvents
 # Type-aliases
 export Vec3, Row3, Mat33, UnitVec, SpatialVec, SpatialMat, TorsionMobilizedBody,
     RevoluteMobilizedBody, PrismaticMobilizedBody, CartesianMobilizedBody,
-    CartesianCoordsMobilizedBody, OrientationMobilizedBody, SphericalMobilizedBody
+    CartesianCoordsMobilizedBody, OrientationMobilizedBody, SphericalMobilizedBody,
+    HertzCircular, HertzElliptical, BrickHalfSpacePenalty, ElasticFoundation, DoNothing,
+    ThrowError
 
 # export cxxparametricsubtypes
 
@@ -79,5 +85,6 @@ include("state.jl")
 include("system_subsystem.jl")
 include("geo.jl")
 include("body.jl")
+include("force.jl")
 
 end
