@@ -60,12 +60,17 @@ export SimTKArray, SimTKVec, SimTKRow, SimTKMat, SimTKUnitVec, Quaternion, Rotat
     HuntCrossleyContact, ContactDetail, HertzCircularContactForceGenerator,
     HertzEllipticalContactForceGenerator, BrickHalfSpacePenaltyContactForceGenerator,
     ElasticFoundationContactForceGenerator, DoNothingContactForceGenerator,
-    ThrowErrorContactForceGenerator
+    ThrowErrorContactForceGenerator, Timestepper, Integrator, CPodesIntegrator,
+    ExplicitEulerIntegrator, RungeKutta2Integrator, RungeKutta3Integrator,
+    RungeKuttaFeldbergIntegrator, RungeKuttaMersonIntegrator, SemiExplicitEuler2Integrator,
+    SemiExplicitEulerIntegrator, VerletIntegrator
 
 # Enum types
 export StageLevel, EventCauseNum, EventTrigger, HandleEventsOption, HandleEventsResult,
     ProjectOption, ProjectResult, RealizeOption, Measure_ExtremeOperation, ContactCondition,
-    MotionLevel, MotionMethod, MobilizedBodyDirection
+    MotionLevel, MotionMethod, MobilizedBodyDirection, IntegratorSuccessfulStepStatus,
+    IntegratorTerminationReason, CPodesLinearMultistepMethod,
+    CPodesNonlinearSystemIterationType
 
 # Type-aliases
 export Vec3, Row3, Mat33, UnitVec, SpatialVec, SpatialMat, TorsionMobilizedBody,
