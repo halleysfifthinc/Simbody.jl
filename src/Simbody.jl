@@ -63,14 +63,14 @@ export SimTKArray, SimTKVec, SimTKRow, SimTKMat, SimTKUnitVec, Quaternion, Rotat
     ThrowErrorContactForceGenerator, Timestepper, Integrator, CPodesIntegrator,
     ExplicitEulerIntegrator, RungeKutta2Integrator, RungeKutta3Integrator,
     RungeKuttaFeldbergIntegrator, RungeKuttaMersonIntegrator, SemiExplicitEuler2Integrator,
-    SemiExplicitEulerIntegrator, VerletIntegrator
+    SemiExplicitEulerIntegrator, VerletIntegrator, Optimizer, OptimizerSystem
 
 # Enum types
 export StageLevel, EventCauseNum, EventTrigger, HandleEventsOption, HandleEventsResult,
     ProjectOption, ProjectResult, RealizeOption, Measure_ExtremeOperation, ContactCondition,
     MotionLevel, MotionMethod, MobilizedBodyDirection, IntegratorSuccessfulStepStatus,
     IntegratorTerminationReason, CPodesLinearMultistepMethod,
-    CPodesNonlinearSystemIterationType
+    CPodesNonlinearSystemIterationType, OptimizerAlgorithm, DifferentiatorMethod
 
 # Type-aliases
 export Vec3, Row3, Mat33, UnitVec, SpatialVec, SpatialMat, TorsionMobilizedBody,
