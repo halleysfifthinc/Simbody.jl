@@ -22,3 +22,9 @@ for (op, func) in zip((:|, :-), (bwor!, sub!))
           return c
       end
 end
+
+function realize(
+    system::reference_type_union(System),
+    state::reference_type_union(State))
+    return realize(system, state, Stage(Stage_HighestRuntime))
+end
